@@ -1,0 +1,462 @@
+/*-----------------------------------------------------------------------------------*/
+/*	0.	CSS Reset & Clearfix - http://meyerweb.com/eric/tools/css/reset/
+/*-----------------------------------------------------------------------------------*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; } :focus { outline: 0; } ins { text-decoration: none; } del { text-decoration: line-through; } table { border-collapse: collapse; border-spacing: 0; }
+
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; } .clearfix { display: inline-block; } /* Hide from IE Mac \*/ .clearfix { display: block; } /* End hide from IE Mac */ .none { display: none; } /* End Clearfix */
+
+body{
+    margin: 0 auto;
+    padding-top: 30px;
+    color: #999999;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+
+/*  header    header    header    header  */
+div#header {
+    height: 140px;
+    text-align: left;
+    margin: 0 auto;
+    }
+div#div-language {
+    text-align: right;
+}
+#nav ul {
+    float: left;
+}
+ul.logo img {
+    background-color: #999999;
+    transition: background-color 0.5s;
+}
+ul.logo img:hover {
+    background-color: #666;
+}
+@media screen and (min-width: 840px) {
+    #nav-ul-0 {
+        width: 150px;
+    }
+    #nav-ul-1 {
+        width: 150px;
+    }
+    #nav-ul-2 {
+        width: 200px;
+    }
+    #nav-ul-3 {
+        width: 250px;
+    }
+    #nav li {
+        height: 19px;
+    }
+    #nav ul {
+        font-size: 13px;
+    }
+    ul.logo img {
+        width: 100px;
+    }
+}
+@media screen and (min-width: 1000px) {
+    div#header {
+        width: 960px;
+    }
+}
+@media screen and (min-width: 840px) and (max-width: 1000px) {
+    div#header {
+        width: 800px;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 840px) {
+    #nav-ul-0 {
+        width: 120px;
+    }
+    #nav-ul-1 {
+        width: 90px;
+    }
+    #nav-ul-2 {
+        width: 120px;
+    }
+    #nav-ul-3 {
+        width: 200px;
+    }
+    #nav li {
+        height: 19px;
+    }
+    #nav ul {
+        font-size: 12px;
+    }
+    ul.logo img {
+        width: 80px;
+    }
+    div#header {
+        width: 580px;
+    }
+}
+@media screen and (max-width: 600px) {
+    #nav-ul-0 {
+        width: 80px;
+    }
+    #nav-ul-1 {
+        width: 55px;
+    }
+    #nav-ul-2 {
+        width: 75px;
+    }
+    #nav-ul-3 {
+        width: 150px;
+    }
+    #nav li {
+        height: 19px;
+    }
+    #nav ul {
+        font-size: 11px;
+    }
+    ul.logo img {
+        width: 70px;
+    }
+    div#header {
+        width: 380px;
+    }
+}
+
+#header a {
+    color: #bebebe;
+    text-decoration: none;
+    transition: color 0.4s;
+}
+#header a:hover {
+    color: #808080;
+}
+/*设置当前进入的 nav 里面的 a 的颜色为深色*/
+#header .enter a {
+    color: #808080;
+}
+
+/*  content    content    content    content  */
+
+div#content{
+    padding: 70px 0 0 0;
+    height: 480px;
+    margin: 0 auto;
+}
+#div-left {
+    float: left;
+}
+#div-right {
+    float: left;
+}
+#description {
+    margin: 20px auto 0 auto;
+    line-height: 16px;
+}
+h5, h6 {
+    font-weight: normal;
+    text-align: center;
+}
+h5 {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+h6 {
+    text-transform: capitalize;
+    font-size: 11px;
+}
+div#description p.tutor {
+    text-align: center;
+}
+div#description p {
+    margin-top: 20px;
+    text-align: justify;
+}
+/*slidebox 的 CSS*/
+/*           设置 slideBox 的样式*/
+
+.slideBox {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.slideBox .hd {
+    width: 60px;
+    margin: 0 auto;
+    text-align: center;
+}
+.slideBox .hd ul li {
+    float: left;
+    width: 15px;
+    cursor: pointer;
+    color: #bebebe;
+    font-size: 11px;
+}
+.slideBox .hd ul li.on {
+    color: #808080;
+}
+.slideBox .bd {
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+}
+.slideBox .bd li img{
+/*    display: block;*/
+    width: 400px;
+    margin: 0 auto;
+}
+#img-portrait {
+    display: block;
+    width: 250px;
+    margin: 50px auto 0 auto;
+}
+
+@media screen and (min-width: 1000px) {
+    div#content {
+        width: 940px;
+    }
+    #div-left, 
+    #div-right {
+        height: 500px;
+    }
+    #div-left {
+        width: 500px;
+    }
+    #div-right {
+        width: 440px;
+    }
+    #description {
+        width: 340px;
+        font-size: 12px;
+    }
+}
+@media screen and (min-width: 840px) and (max-width: 1000px) {
+    div#content {
+        width: 810px;
+    }
+    #div-left, 
+    #div-right {
+        height: 500px;
+    }
+    #div-left {
+        width: 450px;
+    }
+    #div-right {
+        width: 360px;
+    }
+    #description {
+        width: 340px;
+        font-size: 12px;
+    }
+    
+}
+@media screen and (min-width: 600px) and (max-width: 840px) {
+    div#content {
+        width: 550px;
+        height: 900px;
+    }
+    #div-left, 
+    #div-right {
+        height: 370px;
+    }
+    #div-left {
+        width: 550px;
+    }
+    #div-right {
+        width: 550px;
+    }
+    #description {
+        width: 340px;
+        font-size: 12px;
+    }
+    .slideBox .bd li {
+        display: none;
+    }
+}
+@media screen and (max-width: 600px) {
+    div#content {
+        width: 380px;
+        height: 900px;
+    }
+    #div-left, 
+    #div-right {
+        height: 280px;
+    }
+    #div-left {
+        width: 380px;
+    }
+    #div-right {
+        width: 380px;
+    }
+    #description {
+        width: 340px;
+        font-size: 12px;
+    }
+    
+    .slideBox .bd {
+        width: 300px;
+        height: 300px;
+        margin: 20px auto;
+    }
+    .slideBox .bd li {
+        width: 300px;
+    }
+    .slideBox .bd li img{
+        width: 300px;
+    }
+    
+    #img-portrait {
+        width: 200px;
+    }
+}
+
+/*            以下是各个页面个性化的、不通用的 CSS            */
+
+/*   首页的 CSS  */
+/*设置 focus 的 css*/
+#focus {
+    position: relative;
+    height: 500px;
+    margin: 0 auto 40px auto;
+}
+#focus div {
+    position: absolute;
+/*    overflow:hidden;*/
+}
+#focus img {
+    margin: 0 auto;
+}
+#focus #focus_img {
+    display: none;
+}
+@media screen and (min-width: 840px) {
+    #focus {
+        width: 850px;
+    }
+    #focus div {
+        width: 710px;
+        left: 70px;
+    }
+    #focus img {
+        width: 710px;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 840px) {
+    #focus {
+        width: 650px;
+    }
+    #focus div {
+        width: 550px;
+        left: 0px;
+    }
+    #focus img {
+        width: 550px;
+    }
+}
+@media screen and (max-width: 600px) {
+    #focus {
+        width: 400px;
+    }
+    #focus div {
+        width: 350px;
+        left: 15px;
+    }
+    #focus img {
+        width: 350px;
+    }
+}
+/*以下两个设置图片底部的描述文字居左*/
+#focus_bg div {
+    text-align: left;
+}
+#focus_show div {
+    text-align: left;
+}
+
+/*   具体项目页的 CSS   */
+
+/* project页的 CSS*/
+div#projectList {
+    margin: 0 auto;
+}
+@media screen and (min-width: 1000px) {
+    div#projectList {
+        width: 944px;
+    }
+}
+@media screen and (min-width: 840px) and (max-width: 1000px) {
+    div#projectList {
+        width: 708px;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 840px) {
+    div#projectList {
+        width: 472px;
+    }
+}
+@media screen and (max-width: 600px) {
+    div#projectList {
+        width: 354px;
+    }
+}
+div.projectCell {
+    width: 112px;
+    height: 112px;
+    float: left;
+    margin: 3px;
+    background-color: #3c3c3c;
+}
+div.projectCell a div.div-hide table {
+    width: 100%;
+}
+div.projectCell a div.div-hide table tr td {
+    vertical-align: middle;
+    height: 112px;
+    line-height: 14px;
+    font-size: 12px;
+}
+div.div-cover {
+    position: relative;
+    transition: opacity 0.4s;
+}
+div.div-cover:hover {
+    opacity: 0.5;
+}
+div.div-cover img {
+    width: 112px;
+}
+div.div-hide {
+    position: absolute;
+    width: 112px;
+    height: 112px;
+    line-height: 112px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+/*  contact页的 CSS  */
+input, textarea {
+    background-color: #e7e8e9;
+    width: 210px;
+    border: 0 none;
+    margin-left: 10px;
+}
+textarea {
+    height: 100px;
+}
+form {
+    border-top: 1px solid #e7e8e9;
+    margin: 20px 10px;
+}
+form div {
+    margin: 7px 0;
+}
+label {
+    display: block;
+    float: left;
+    width: 80px;
+    text-align: right;
+}
+
+
+
+
+
+
