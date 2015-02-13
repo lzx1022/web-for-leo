@@ -94,10 +94,17 @@ ul.logo img:hover {
 }
 @media screen and (max-width: 600px) {
     #nav-ul-0 {
-        width: 80px;
+        width: 370px;
+        height: 60px;
+    }
+    #nav-ul-0 li a {
+        display: block;
+        width: 70px;
+        margin: 0 auto;
     }
     #nav-ul-1 {
         width: 55px;
+        margin-left: 20px;
     }
     #nav-ul-2 {
         width: 75px;
@@ -115,7 +122,7 @@ ul.logo img:hover {
         width: 70px;
     }
     div#header {
-        width: 380px;
+        width: 370px;
     }
 }
 
@@ -271,7 +278,7 @@ div#description p {
 }
 @media screen and (max-width: 600px) {
     div#content {
-        width: 380px;
+        width: 370px;
         height: 900px;
     }
     #div-left, 
@@ -279,10 +286,10 @@ div#description p {
         height: 280px;
     }
     #div-left {
-        width: 380px;
+        width: 370px;
     }
     #div-right {
-        width: 380px;
+        width: 370px;
     }
     #description {
         width: 340px;
@@ -351,11 +358,11 @@ div#description p {
 }
 @media screen and (max-width: 600px) {
     #focus {
-        width: 400px;
+        width: 370px;
     }
     #focus div {
         width: 350px;
-        left: 15px;
+        left: 10px;
     }
     #focus img {
         width: 350px;
