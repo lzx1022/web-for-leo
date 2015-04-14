@@ -22,6 +22,7 @@ div#header {
     }
 div#div-language {
     text-align: right;
+    margin-bottom: 10px;
 }
 #nav ul {
     float: left;
@@ -124,6 +125,9 @@ ul.logo img:hover {
     div#header {
         width: 370px;
     }
+    div#div-language {
+        margin-right: 10px;
+    }
 }
 
 #header a {
@@ -183,19 +187,19 @@ div#description p {
     overflow: hidden;
     margin: 0 auto;
 }
-.slideBox .hd {
+.hd {
     width: 60px;
     margin: 0 auto;
     text-align: center;
 }
-.slideBox .hd ul li {
+.hd > ul > li {
     float: left;
     width: 15px;
     cursor: pointer;
     color: #bebebe;
     font-size: 11px;
 }
-.slideBox .hd ul li.on {
+.hd > ul > li.on {
     color: #808080;
 }
 .slideBox .bd {
