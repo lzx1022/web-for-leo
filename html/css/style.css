@@ -142,6 +142,10 @@ nav > ul:nth-child(1) img {
 nav > ul:nth-child(1) img:hover {
     background-color: #666;
 }
+/*给当前所在页面相对应的 nav 加上高亮状态*/
+.here {
+    color: #808080;
+}
 @media screen and (min-width: 840px) {
     nav {
         font-size: 13px;
