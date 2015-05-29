@@ -1,10 +1,88 @@
-/*-----------------------------------------------------------------------------------*/
-/*	0.	CSS Reset & Clearfix - http://meyerweb.com/eric/tools/css/reset/
-/*-----------------------------------------------------------------------------------*/
+/*
+目录：
+1. 颜色表
+2. preset
+    1. CSS reset
+    2. 闭合（清除）浮动
+    3. Webfonts
+    4. Media Query 索引
+3. 基本样式
+    1. body
+    2. header
+    3. main
+    4. footer
+4. 分页样式
+    1. 网站首页样式
+    2. 项目预览页样式
+        1. 项目预览页公共样式
+        2. 项目预览页分项目样式
+    3. 项目内文页样式
+        1. 项目内文页公共样式
+            1. 一般样式
+            2. 组件样式
+    4. about 页面样式
+    5. contact 页面样式
+    6. 404.50x 页面样式
+*/
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; } :focus { outline: 0; } ins { text-decoration: none; } del { text-decoration: line-through; } table { border-collapse: collapse; border-spacing: 0; }
 
-.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; } .clearfix { display: inline-block; } /* Hide from IE Mac \*/ .clearfix { display: block; } /* End hide from IE Mac */ .none { display: none; } /* End Clearfix */
+
+
+
+/*2.*/
+/* preset  preset  preset  preset  preset  preset  preset  preset */
+/* preset  preset  preset  preset  preset  preset  preset  preset */
+/* preset  preset  preset  preset  preset  preset  preset  preset */
+
+/*2.1. CSS reset*/
+
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+ html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ a, abbr, acronym, address, big, cite, code,
+ del, dfn, em, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var,
+ b, u, i, center,
+ dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td,
+ article, aside, canvas, details, embed,
+ figure, figcaption, footer, header, hgroup,
+ menu, nav, output, ruby, section, summary,
+ time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
 body{
     margin: 0 auto;
@@ -14,186 +92,388 @@ body{
     font-size: 15px;
 }
 
-/*  header    header    header    header  */
-div#header {
+/*2.2. 闭合(清除)浮动*/
+
+/*清除浮动
+来自-那些年，我们1起清除过的浮动：http://www.iyunlu.com/view/css-xhtml/55.html*/
+.main:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+/*2.3. Webfonts*/
+@font-face {
+    font-family: 'PT Serif 2';
+    src: url('../fonts/PT_Serif.eot') format('eot');/*IE*/
+    src:url('../fonts/PT_Serif.woff') format('woff'), url('../fonts/PT_Serif.ttf') format('truetype');/*non-IE*/
+}
+
+/*
+2.4. Media Query 索引
+XXXX
+*/
+
+
+/*3.*/
+/* 基本样式  基本样式  基本样式  基本样式  基本样式  基本样式  基本样式  基本样式 */
+/* 基本样式  基本样式  基本样式  基本样式  基本样式  基本样式  基本样式  基本样式 */
+/* 基本样式  基本样式  基本样式  基本样式  基本样式  基本样式  基本样式  基本样式 */
+
+/*3.1. body    body    body    body*/
+
+/* 3.2. header    header    header    header  */
+header {
     height: 140px;
     text-align: left;
     margin: 0 auto;
-    }
-div#div-language {
+}
+header > div:nth-child(1) {
     text-align: right;
     margin-bottom: 10px;
 }
-#nav ul {
+nav > ul {
     float: left;
 }
-ul.logo img {
-    background-color: #999999;
-    transition: background-color 0.5s;
+nav > ul:nth-child(1) img {
+    background-color: #999;
+    transition: background-color .5s;
 }
-ul.logo img:hover {
+nav > ul:nth-child(1) img:hover {
     background-color: #666;
 }
 @media screen and (min-width: 840px) {
-    #nav-ul-0 {
-        width: 150px;
-    }
-    #nav-ul-1 {
-        width: 150px;
-    }
-    #nav-ul-2 {
-        width: 200px;
-    }
-    #nav-ul-3 {
-        width: 250px;
-    }
-    #nav li {
-        height: 19px;
-    }
-    #nav ul {
+    nav {
         font-size: 13px;
     }
-    ul.logo img {
+    nav li {
+        height: 19px;
+    }
+    nav > ul:nth-child(1)  {
+        width: 150px;
+    }
+    nav > ul:nth-child(1) img {
         width: 100px;
+    }
+    nav > ul:nth-child(2)  {
+        width: 150px;
+    }
+    nav > ul:nth-child(3)  {
+        width: 200px;
+    }
+    nav > ul:nth-child(4)  {
+        width: 250px;
     }
 }
 @media screen and (min-width: 1000px) {
-    div#header {
+    header {
         width: 960px;
     }
 }
 @media screen and (min-width: 840px) and (max-width: 1000px) {
-    div#header {
+    header {
         width: 800px;
     }
 }
 @media screen and (min-width: 600px) and (max-width: 840px) {
-    #nav-ul-0 {
-        width: 120px;
+    header {
+        width: 580px;
     }
-    #nav-ul-1 {
-        width: 90px;
-    }
-    #nav-ul-2 {
-        width: 120px;
-    }
-    #nav-ul-3 {
-        width: 200px;
-    }
-    #nav li {
-        height: 19px;
-    }
-    #nav ul {
+    nav{
         font-size: 12px;
     }
-    ul.logo img {
+    nav li {
+        height: 19px;
+    }
+    nav > ul:nth-child(1)  {
+        width: 120px;
+    }
+    nav > ul:nth-child(1) img {
         width: 80px;
     }
-    div#header {
-        width: 580px;
+    nav > ul:nth-child(2)  {
+        width: 90px;
+    }
+    nav > ul:nth-child(3)  {
+        width: 120px;
+    }
+    nav > ul:nth-child(4)  {
+        width: 200px;
     }
 }
 @media screen and (max-width: 600px) {
-    #nav-ul-0 {
+    header {
+        width: 370px;
+    }
+    nav {
+        font-size: 11px;
+    }
+    nav li {
+        height: 19px;
+    }
+    header > div:nth-child(1) {
+        margin-right: 10px;
+    }
+    nav > ul:nth-child(1)  {
         width: 370px;
         height: 60px;
     }
-    #nav-ul-0 li a {
+    nav > ul:nth-child(1) img {
+        width: 70px;
+    }
+    nav > ul:nth-child(1) > li > a {
         display: block;
         width: 70px;
         margin: 0 auto;
     }
-    #nav-ul-1 {
+    nav > ul:nth-child(2)  {
         width: 55px;
         margin-left: 20px;
     }
-    #nav-ul-2 {
+    nav > ul:nth-child(3)  {
         width: 75px;
     }
-    #nav-ul-3 {
+    nav > ul:nth-child(4)  {
         width: 150px;
     }
-    #nav li {
-        height: 19px;
-    }
-    #nav ul {
-        font-size: 11px;
-    }
-    ul.logo img {
-        width: 70px;
-    }
-    div#header {
-        width: 370px;
-    }
-    div#div-language {
-        margin-right: 10px;
-    }
 }
-
-#header a {
+header a {
     color: #bebebe;
     text-decoration: none;
-    transition: color 0.4s;
+    transition: color .4s;
 }
-#header a:hover {
+header a:hover {
     color: #808080;
 }
 /*设置当前进入的 nav 里面的 a 的颜色为深色*/
-#header .enter a {
+.enter a {
     color: #808080;
 }
 
-/*  content    content    content    content  */
-
-div#content{
+/* 3.3. main    main    main    main  */
+.main {
+    width: 940px;
     padding: 70px 0 0 0;
     height: 480px;
     margin: 0 auto;
 }
-#div-left {
+@media screen and (min-width: 840px) and (max-width: 1000px) {
+    .main {
+        width: 810px;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 840px) {
+    .main {
+        width: 550px;
+        height: 900px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .main {
+        width: 370px;
+        height: 900px;
+    }
+}
+
+ /*3.4. footer    footer    footer    footer*/
+
+
+/*4.*/
+/* 分页样式  分页样式  分页样式  分页样式  分页样式  分页样式  分页样式  分页样式 */
+/* 分页样式  分页样式  分页样式  分页样式  分页样式  分页样式  分页样式  分页样式 */
+/* 分页样式  分页样式  分页样式  分页样式  分页样式  分页样式  分页样式  分页样式 */
+
+/*4.1.网站首页样式*/
+.main-enter-page > .slideBox > .bd {
+    width: 750px;
+}
+.main-enter-page > .slideBox > .bd li > img {
+    width: 750px;
+}
+@media screen and (min-width: 600px) and (max-width: 840px) {
+    .main-enter-page > .slideBox > .bd {
+        width: 550px;
+    }
+    .main-enter-page > .slideBox > .bd li > img {
+        width: 550px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .main-enter-page > .slideBox > .bd {
+        width: 350px;
+    }
+    .main-enter-page > .slideBox > .bd li > img {
+        width: 350px;
+    }
+}
+
+/*4.2. 项目预览页样式*/
+/*4.2.1. 项目预览页样式-公共样式*/
+.main-project > div,
+.main-drawing > div {
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1000px) {
+    .main-project > div,
+    .main-drawing > div {
+        width: 944px;
+    }
+}
+@media screen and (min-width: 840px) and (max-width: 1000px) {
+    .main-project > div,
+    .main-drawing > div {
+        width: 708px;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 840px) {
+    .main-project > div,
+    .main-drawing > div {
+        width: 472px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .main-project > div,
+    .main-drawing > div {
+        width: 354px;
+    }
+}
+.main-project > div > a,
+.main-drawing > div > a {
+    display: block;
+    float: left;
+    width: 112px;
+    height: 112px;
+    margin: 3px;
+    background-color: #3c3c3c;
+}
+.main-project > div > div a,
+.main-drawing > div > div a {
+    display: block;
+    margin: 15px;
+}
+.main-project > div > a > div,
+.main-drawing > div > a > div {
+    position: absolute;
+
+    display: table;
+    height: 112px;
+    width: 112px;
+
+    font-size: 12px;
+
+    color: #fff;
+/*    加上 important 因为 background 在 background-size 之后设置会覆盖前面的效果*/
+            /*分开设置的话就没事了*/
+    background-size: 112px 112px;
+    background-repeat: no-repeat;
+}
+/*设置包含文字内容的 div 的样式*/
+.main-project > div > a > div > div,
+.main-drawing > div > a > div > div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+/*设置用来遮盖的 div 的样式*/
+.main-project > div > a > div + div,
+.main-drawing > div > a > div + div {
+    position: relative;
+    transition: opacity .5s;
+}
+.main-project > div > a > div + div:hover,
+.main-drawing > div > a > div + div:hover {
+    opacity: .1;
+}
+
+/*4.2.2.项目预览页样式-分项目样式*/
+/*4.2.2.1. project*/
+/*4.2.2.1.1. Osceola Pergola*/
+.main-project > div > a:nth-child(1) > div + div {
+    background-image: url(../project/architecture/images/osceola-pergola.jpg);
+}
+/*4.2.2.1.2. Historic Spanish Village*/
+.main-project > div > a:nth-child(2) > div + div {
+    background-image: url(../project/architecture/images/historic-spanish-village.jpg);
+}
+/*4.2.2.1.3. Infinity Water*/
+.main-project > div > a:nth-child(3) > div + div {
+    background-image: url(../project/architecture/images/infinity-water.jpg);
+}
+/*4.2.2.1.4. Three Teacher School*/
+.main-project > div > a:nth-child(4) > div + div {
+    background-image: url(../project/architecture/images/three-teachers-school.jpg);
+}
+/*4.2.2.1.5. Delong Residence*/
+.main-project > div > a:nth-child(5) > div + div {
+    background-image: url(../project/architecture/images/deLong-residence.jpg);
+}
+/*4.2.2.1.6. Market Portico Ottavia*/
+.main-project > div > a:nth-child(6) > div + div {
+    background-image: url(../project/architecture/images/market-portico-ottavia.jpg);
+}
+
+/*4.2.2.2. drawing*/
+/*4.2.2.2.1. Art 101*/
+.main-drawing > div > a:nth-child(1) > div + div {
+    background-image: url(../drawing/images/art-101.jpg);
+}
+/*4.2.2.2.2. Drawing of Rome*/
+.main-drawing > div > a:nth-child(2) > div + div {
+    background-image: url(../drawing/images/drawings-of-rome.jpg);
+}
+
+/*4.3. 项目内文页样式*/
+/*4.3.1. 项目内文页公共样式*/
+/*4.3.1.1. 项目内文页公共样式-一般样式*/
+.main-in > div {
     float: left;
 }
-#div-right {
-    float: left;
-}
-#description {
+.main-in > div:nth-child(2) > div {
     margin: 20px auto 0 auto;
     line-height: 16px;
 }
-h5, h6 {
+.main-in > div:nth-child(2) > div > h5,
+.main-in > div:nth-child(2) > div > h6 {
     font-weight: normal;
     text-align: center;
 }
-h5 {
+.main-in > div:nth-child(2) > div > h5 {
     text-transform: uppercase;
     font-size: 14px;
 }
-h6 {
+.main-in > div:nth-child(2) > div > h6 {
     text-transform: capitalize;
     font-size: 11px;
 }
-div#description p.tutor {
-    text-align: center;
-}
-div#description p {
+.main-in > div:nth-child(2) > div p {
     margin-top: 20px;
     text-align: justify;
 }
-/*slidebox 的 CSS*/
-/*           设置 slideBox 的样式*/
+.main-in > div:nth-child(2) > div > p:nth-child(1) {
+    text-align: center;
+}
 
+/*4.3.1.2. 项目内文页公共样式-组件样式样式*/
+/*4.3.1.2.1. 项目内文页公共样式-组件样式样式-slide组件*/
 .slideBox {
     position: relative;
     overflow: hidden;
     margin: 0 auto;
 }
 .hd {
-    width: 60px;
+    /*width: 60px;*/
     margin: 0 auto;
     text-align: center;
 }
+/*用 inline-block 实现更好的居中效果*/
+.hd > ul {
+    text-align: center;
+}
 .hd > ul > li {
-    float: left;
+    display: inline-block;
+
+    /*float: left;*/
     width: 15px;
     cursor: pointer;
     color: #bebebe;
@@ -205,74 +485,62 @@ div#description p {
 .slideBox .bd {
     width: 400px;
     height: 400px;
-    margin: 20px auto;
+    margin: 10px auto;
 }
 .slideBox .bd li img{
-/*    display: block;*/
     width: 400px;
     margin: 0 auto;
 }
-#img-portrait {
+.img-portrait {
     display: block;
     width: 250px;
     margin: 50px auto 0 auto;
 }
-
 @media screen and (min-width: 1000px) {
-    div#content {
-        width: 940px;
-    }
-    #div-left, 
-    #div-right {
+    .main-in > div:nth-child(1),
+    .main-in > div:nth-child(2) {
         height: 500px;
     }
-    #div-left {
+    .main-in > div:nth-child(1) {
         width: 500px;
     }
-    #div-right {
+    .main-in > div:nth-child(2) {
         width: 440px;
     }
-    #description {
+    .main-in > div:nth-child(2) > div {
         width: 340px;
         font-size: 12px;
     }
 }
 @media screen and (min-width: 840px) and (max-width: 1000px) {
-    div#content {
-        width: 810px;
-    }
-    #div-left, 
-    #div-right {
+    .main-in > div:nth-child(1),
+    .main-in > div:nth-child(2) {
         height: 500px;
     }
-    #div-left {
+    .main-in > div:nth-child(1) {
         width: 450px;
     }
-    #div-right {
+    .main-in > div:nth-child(2) {
         width: 360px;
     }
-    #description {
+    .main-in > div:nth-child(2) > div {
         width: 340px;
         font-size: 12px;
     }
-    
+
 }
 @media screen and (min-width: 600px) and (max-width: 840px) {
-    div#content {
-        width: 550px;
-        height: 900px;
-    }
-    #div-left, 
-    #div-right {
+    .main-in > div:nth-child(1),
+    .main-in > div:nth-child(2) {
         height: 370px;
     }
-    #div-left {
+    .main-in > div:nth-child(1) {
         width: 550px;
     }
-    #div-right {
+    .main-in > div:nth-child(2) {
         width: 550px;
     }
-    #description {
+    .main-in > div:nth-child(2) > div {
         width: 340px;
         font-size: 12px;
     }
@@ -281,25 +549,20 @@ div#description p {
     }
 }
 @media screen and (max-width: 600px) {
-    div#content {
-        width: 370px;
-        height: 900px;
-    }
-    #div-left, 
-    #div-right {
+    .main-in > div:nth-child(1),
+    .main-in > div:nth-child(2) {
         height: 280px;
     }
-    #div-left {
+    .main-in > div:nth-child(1) {
         width: 370px;
     }
-    #div-right {
+    .main-in > div:nth-child(2) {
         width: 370px;
     }
-    #description {
+    .main-in > div:nth-child(2) > div {
         width: 340px;
         font-size: 12px;
     }
-    
     .slideBox .bd {
         width: 300px;
         height: 300px;
@@ -311,138 +574,14 @@ div#description p {
     .slideBox .bd li img{
         width: 300px;
     }
-    
-    #img-portrait {
+    .img-portrait {
         width: 200px;
     }
 }
 
-/*            以下是各个页面个性化的、不通用的 CSS            */
+/*4.4. about 页面样式*/
 
-/*   首页的 CSS  */
-/*设置 focus 的 css*/
-#focus {
-    position: relative;
-    height: 500px;
-    margin: 0 auto 40px auto;
-}
-#focus div {
-    position: absolute;
-/*    overflow:hidden;*/
-}
-#focus img {
-    margin: 0 auto;
-}
-#focus #focus_img {
-    display: none;
-}
-@media screen and (min-width: 840px) {
-    #focus {
-        width: 850px;
-    }
-    #focus div {
-        width: 710px;
-        left: 70px;
-    }
-    #focus img {
-        width: 710px;
-    }
-}
-@media screen and (min-width: 600px) and (max-width: 840px) {
-    #focus {
-        width: 650px;
-    }
-    #focus div {
-        width: 550px;
-        left: 0px;
-    }
-    #focus img {
-        width: 550px;
-    }
-}
-@media screen and (max-width: 600px) {
-    #focus {
-        width: 370px;
-    }
-    #focus div {
-        width: 350px;
-        left: 10px;
-    }
-    #focus img {
-        width: 350px;
-    }
-}
-/*以下两个设置图片底部的描述文字居左*/
-#focus_bg div {
-    text-align: left;
-}
-#focus_show div {
-    text-align: left;
-}
-
-/*   具体项目页的 CSS   */
-
-/* project页的 CSS*/
-div#projectList {
-    margin: 0 auto;
-}
-@media screen and (min-width: 1000px) {
-    div#projectList {
-        width: 944px;
-    }
-}
-@media screen and (min-width: 840px) and (max-width: 1000px) {
-    div#projectList {
-        width: 708px;
-    }
-}
-@media screen and (min-width: 600px) and (max-width: 840px) {
-    div#projectList {
-        width: 472px;
-    }
-}
-@media screen and (max-width: 600px) {
-    div#projectList {
-        width: 354px;
-    }
-}
-div.projectCell {
-    width: 112px;
-    height: 112px;
-    float: left;
-    margin: 3px;
-    background-color: #3c3c3c;
-}
-div.projectCell a div.div-hide table {
-    width: 100%;
-}
-div.projectCell a div.div-hide table tr td {
-    vertical-align: middle;
-    height: 112px;
-    line-height: 14px;
-    font-size: 12px;
-}
-div.div-cover {
-    position: relative;
-    transition: opacity 0.4s;
-}
-div.div-cover:hover {
-    opacity: 0.5;
-}
-div.div-cover img {
-    width: 112px;
-}
-div.div-hide {
-    position: absolute;
-    width: 112px;
-    height: 112px;
-    line-height: 112px;
-    text-align: center;
-    color: #fff;
-    font-size: 14px;
-}
-
-/*  contact页的 CSS  */
+/*4.5. contact 页面样式*/
 input, textarea {
     background-color: #e7e8e9;
     width: 210px;
@@ -464,6 +603,36 @@ label {
     float: left;
     width: 80px;
     text-align: right;
+}
+
+/*4.6. 404.50x 页面样式*/
+/*为了不与其他样式冲突，采用 id 覆盖其他权重*/
+.main-error-page > div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 400px; height: 220px;
+    margin: auto;
+    padding: 0;
+    /*为了取消其他样式的效果*/
+    float: none;
+}
+.main-error-page h1 {
+    margin: 0;
+    font-size: 400%;
+    line-height: 210px;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .main-error-page {
+        width: 300px;
+    }
+    .main-error-page h1 {
+        font-size: 300%;
+    }
 }
 
 
