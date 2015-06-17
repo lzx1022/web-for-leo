@@ -586,24 +586,31 @@ header a:hover {
 /*4.4. about 页面样式*/
 
 /*4.5. contact 页面样式*/
-input, textarea {
+.main-in-contact > div > div > h5 {
+    margin-bottom: 20px;
+}
+.main-in-contact > div > div > p {
+    /*取消 main-in 的 margin-top*/
+    margin-top: 0!important;
+}
+.main-in-contact form {
+    border-top: 1px solid #e7e8e9;
+    margin: 20px 10px;
+}
+.main-in-contact form > div {
+    margin: 7px 0;
+}
+.main-in-contact input,
+.main-in-contact textarea {
     background-color: #e7e8e9;
     width: 210px;
     border: 0 none;
     margin-left: 10px;
 }
-textarea {
+.main-in-contact textarea {
     height: 100px;
 }
-form {
-    border-top: 1px solid #e7e8e9;
-    margin: 20px 10px;
-}
-form div {
-    margin: 7px 0;
-}
-label {
-    display: block;
+.main-in-contact form > div > label {
     float: left;
     width: 80px;
     text-align: right;
